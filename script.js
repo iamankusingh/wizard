@@ -104,14 +104,19 @@ let menuOpen = false;
 
 const section = document.querySelectorAll("section");
 let clicked = false;
+
 section[0].addEventListener("click", () => {
   clicked = true;
-  toggleMenu();
+  if (menuOpen) {
+    toggleMenu();
+  }
 });
 
-section[1].addEventListener("click", () => {
+section[0].addEventListener("click", () => {
   clicked = true;
-  toggleMenu();
+  if (menuOpen) {
+    toggleMenu();
+  }
 });
 
 menu.addEventListener("click", () => {
